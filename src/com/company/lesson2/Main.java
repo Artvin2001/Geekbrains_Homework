@@ -3,10 +3,10 @@ package com.company.lesson2;
 public class Main {
 
     public static void main(String[] args){
-        int a = 2;
 
     }
 
+    //task1
     public static void invertArray(){
         int[] arr = {1, 0, 0, 1, 0, 1};
 
@@ -16,6 +16,7 @@ public class Main {
             } else if (arr[i] == 0) arr[i] = 1;
     }
 
+    //task2
     public static void fillArray() {
         int[] arr = new int[8];
         int coef = 3;
@@ -25,6 +26,7 @@ public class Main {
         }
     }
 
+    //task3
     public static void changeArray() {
         int[] arr = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
 
@@ -35,6 +37,7 @@ public class Main {
         }
     }
 
+    //task4
     public static void fillDiagonalElements() {
         int length = 4;
         int[][] matrix = new int [length][length];
@@ -47,6 +50,7 @@ public class Main {
             }
     }
 
+    //task5
     public static void findMaxMin() {
         int[] arr = {6, -7, 1, 8, 2};
         int max = arr[0];
@@ -61,6 +65,7 @@ public class Main {
         }
     }
 
+    //task6
     public static boolean isSumEqual(int[] arr)
     {
         int sum_l = 0;
