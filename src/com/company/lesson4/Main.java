@@ -49,58 +49,60 @@ public class Main {
     }
     public static boolean checkWin(char symb) {
 
-        boolean flag = true;
-        //проверка строк
-        for (int i = 0; i < DOTS_TO_WIN; i++) {
-            flag = true;
+        int quantity = 0;
 
-            for (int j = 0; j < DOTS_TO_WIN; j++) {
-                if (map[i][j] != symb)
-                    flag = false;
+        //проверка строк
+        for (int i = 0; i < SIZE; i++) {
+            quantity = 0;
+
+            for (int j = 0; j < SIZE; j++) {
+                if (map[i][j] == symb)
+                    quantity += 1;
             }
 
-            if (flag == true)
-                return flag;
+            if (quantity == DOTS_TO_WIN)
+                return true;
         }
 
         //проверка столбцов
-        for (int i = 0; i < DOTS_TO_WIN; i++) {
-            flag = true;
+        for (int i = 0; i < SIZE; i++) {
+            quantity = 0;
 
             for (int j = 0; j < DOTS_TO_WIN; j++) {
-                if (map[j][i] != symb)
-                    flag = false;
+                if (map[j][i] == symb)
+                    quantity += 1;
             }
 
-            if (flag == true)
-                return flag;
+            if (quantity == DOTS_TO_WIN)
+                return true;
         }
 
         //проверка главной диагонали
-        flag = true;
+        quantity = 0;
 
-        for (int i = 0; i < DOTS_TO_WIN; i++) {
-            if (map[i][i] != symb)
-                flag = false;
+        for (int i = 0; i < SIZE; i++) {
+            if (map[i][i] == symb)
+                quantity += 1;
 
         }
 
-        if (flag == true)
-            return flag;
+        if (quantity == DOTS_TO_WIN)
+            return true;
 
         //проверка побочной диагонали
-        flag = true;
+        quantity = 0;
 
-        for (int i = 0; i < DOTS_TO_WIN; i++) {
-            for (int j = 0; j < DOTS_TO_WIN; j++) {
-                if (i + j == DOTS_TO_WIN - 1 && map[i][j] != symb)
-                    flag = false;
+        for (int i = 0; i < SIZE; i++) {
+            for (int j = 0; j < SIZE; j++) {
+                if (i + j == SIZE - 1 && map[i][j] != symb)
+                    quantity += 1;
             }
 
         }
 
-        if (flag == true)
-            return flag;
+        if (quantity == DOTS_TO_WIN)
+            return true;
+
         return false;
     }
     public static boolean isMapFull() {
