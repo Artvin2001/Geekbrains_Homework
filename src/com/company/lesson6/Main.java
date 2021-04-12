@@ -3,18 +3,18 @@ package com.company.lesson6;
 public class Main {
     public static void main(String[] args) {
         //примеры работы
-        Dog dogExample = new Dog("Бобик", 3);
-        dogExample.run(120);
-        dogExample.run(600);
-        dogExample.run(-5);
-        dogExample.swim(5);
-        dogExample.swim(100);
-        dogExample.swim(-4);
+        Dog dogBobik = new Dog("Бобик", 3);
+        dogBobik.run(120);
+        dogBobik.run(600);
+        dogBobik.run(-5);
+        dogBobik.swim(5);
+        dogBobik.swim(100);
+        dogBobik.swim(-4);
 
-        Cat catExample = new Cat("Барсик", 6);
-        catExample.run(25);
-        catExample.run(230);
-        catExample.run(-2);
-        catExample.swim(23);
+        Cat catBarsik = new Cat("Барсик", 6);
+        catBarsik.run(25);
+        catBarsik.run(230);
+        catBarsik.run(-2);
+        catBarsik.swim(23);
     }
 }
