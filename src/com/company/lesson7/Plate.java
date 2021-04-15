@@ -12,10 +12,12 @@ public class Plate {
             return 0;
         }
         else {
+            //если не удалось поесть
             return 1;
         }
     }
 
+    //добавление еды
     public void addFood(int n)
     {
         food += n;
