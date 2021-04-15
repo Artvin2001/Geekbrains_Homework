@@ -5,7 +5,7 @@ public class Main {
         Cat[] catArray = new Cat[4];
         catArray[0] = new Cat("Барсик", 40, false);
         catArray[1] = new Cat("Мурзик", 25, false);
-        catArray[2] = new Cat("Джим", 15, true);
+        catArray[2] = new Cat("Джим", 15, false);
         catArray[3] = new Cat("Пушок", 20, false);
 
         Plate plate = new Plate(75);
@@ -14,6 +14,8 @@ public class Main {
             catArray[i].eat(plate);
             catArray[i].catInfo();
         }
+
+        plate.info();
     }
 
 }
