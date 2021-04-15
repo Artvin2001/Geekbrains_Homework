@@ -5,9 +5,22 @@ public class Plate {
     public Plate(int food) {
         this.food = food;
     }
-    public void decreaseFood(int n) {
-        food -= n;
+    public int decreaseFood(int n) {
+        if (food - n >= 0)
+        {
+            food -= n;
+            return 0;
+        }
+        else {
+            return 1;
+        }
     }
+
+    public void addFood(int n)
+    {
+        food += n;
+    }
+
     public void info() {
         System.out.println("plate: " + food);
     }
