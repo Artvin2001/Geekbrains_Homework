@@ -10,12 +10,12 @@ public class Robot implements Member{
         this.maxHeight = maxHeight;
     }
 
-    public void run(int distance)
+    public void run()
     {
         System.out.println("Робот бежит.");
     }
 
-    public void jump(int height)
+    public void jump()
     {
         System.out.println("Робот прыгает.");
     }

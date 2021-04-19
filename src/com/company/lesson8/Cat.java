@@ -11,12 +11,12 @@ public class Cat implements Member{
         this.maxHeight = maxHeight;
     }
 
-    public void run(int distance)
+    public void run()
     {
         System.out.println("Кот бежит.");
     }
 
-    public void jump(int height)
+    public void jump()
     {
         System.out.println("Кот прыгает.");
     }

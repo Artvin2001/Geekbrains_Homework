@@ -1,7 +1,7 @@
 package com.company.lesson8;
 
 public class RunnigTrack implements Barrier{
-    //private int length;
+
     private int distance;
 
     public RunnigTrack(int distance)
@@ -9,12 +9,16 @@ public class RunnigTrack implements Barrier{
         this.distance = distance;
     }
 
-    public void overcome(int maxMemberDistance)
+    public boolean overcome(int maxMemberDistance)
     {
-        if (maxMemberDistance >= distance)
+        if (maxMemberDistance >= distance) {
             System.out.println("Успешно пробежал.");
-        else
+            return true;
+        }
+        else {
             System.out.println("Не смог пробежать.");
+            return false;
+        }
     }
 
     public int getDistance()

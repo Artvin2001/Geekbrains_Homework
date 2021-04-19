@@ -14,18 +14,22 @@ public class Main {
         barriers[1] = new Wall(3);
         barriers[2] = new RunnigTrack(200);
 
-        for (int i = 0; i < barriers.length; i++) {
-            for (int j = 0; j < members.length; j++) {
-                if (barriers[i] instanceof RunnigTrack)
+        boolean result;
+        for (int i = 0; i < members.length; i++) {
+            for (int j = 0; j < barriers.length; j++) {
+                if (barriers[j] instanceof RunnigTrack)
                 {
-                    members[j].run(barriers[i].getDistance());
-                    barriers[i].overcome(members[j].getMaxDistance());
+                    members[i].run();
+                    result = barriers[j].overcome(members[i].getMaxDistance());
                 }
                 else
                 {
-                    members[j].jump(barriers[i].getDistance());
-                    barriers[i].overcome(members[j].getMaxHeight());
+                    members[i].jump();
+                    result = barriers[j].overcome(members[i].getMaxHeight());
                 }
+
+                if (result == false)
+                    break;
 
             }
 
