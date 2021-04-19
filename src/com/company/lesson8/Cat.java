@@ -1,10 +1,11 @@
 package com.company.lesson8;
 
 public class Cat implements Member{
+
     private int maxDistance;
     private int maxHeight;
 
-    public void Robot(int maxDistance, int maxHeight)
+    public Cat(int maxDistance, int maxHeight)
     {
         this.maxDistance = maxDistance;
         this.maxHeight = maxHeight;
@@ -19,4 +20,14 @@ public class Cat implements Member{
     {
         System.out.println("Кот прыгает.");
     }
+
+    public int getMaxDistance()
+    {
+        return maxDistance;
+    }
+
+    public int getMaxHeight(){
+        return maxHeight;
+    }
+
 }

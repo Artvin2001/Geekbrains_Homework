@@ -4,7 +4,7 @@ public class Man implements Member{
     private int maxDistance;
     private int maxHeight;
 
-    public void Man(int maxDistance, int maxHeight)
+    public Man(int maxDistance, int maxHeight)
     {
         this.maxDistance = maxDistance;
         this.maxHeight = maxHeight;
@@ -18,5 +18,14 @@ public class Man implements Member{
     public void jump(int height)
     {
         System.out.println("Человек прыгает.");
+    }
+
+    public int getMaxDistance()
+    {
+        return maxDistance;
+    }
+
+    public int getMaxHeight(){
+        return maxHeight;
     }
 }

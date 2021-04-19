@@ -1,16 +1,16 @@
 package com.company.lesson8;
 
-public class Wall {
+public class Wall implements Barrier{
     private int height;
 
-    public void Wall(int height)
+    public Wall(int height)
     {
         this.height = height;
     }
 
-    public void jumpWall(int memberMaxHeight)
+    public void overcome(int maxMemberdistance)
     {
-        if (memberMaxHeight >= height)
+        if (maxMemberdistance >= height)
             System.out.println("Успешно перепрыгнул.");
         else
             System.out.println("Не смог перепрыгнуть.");
