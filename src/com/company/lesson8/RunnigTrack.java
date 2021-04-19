@@ -2,7 +2,7 @@ package com.company.lesson8;
 
 public class RunnigTrack implements Barrier{
     //private int length;
-    public int distance;
+    private int distance;
 
     public RunnigTrack(int distance)
     {
@@ -15,5 +15,10 @@ public class RunnigTrack implements Barrier{
             System.out.println("Успешно пробежал.");
         else
             System.out.println("Не смог пробежать.");
+    }
+
+    public int getDistance()
+    {
+        return distance;
     }
 }

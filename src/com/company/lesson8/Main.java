@@ -2,7 +2,7 @@ package com.company.lesson8;
 
 public class Main {
 
-    public void main(String[] args)
+    public static void main(String[] args)
     {
         Member[] members = new Member[3];
         members[0] = new Cat(34, 2);
@@ -18,11 +18,13 @@ public class Main {
             for (int j = 0; j < members.length; j++) {
                 if (barriers[i] instanceof RunnigTrack)
                 {
-                    barriers[i].overcome(members[i].getMaxDistance());
+                    members[j].run(barriers[i].getDistance());
+                    barriers[i].overcome(members[j].getMaxDistance());
                 }
                 else
                 {
-                    barriers[i].overcome(members[i].getMaxHeight());
+                    members[j].jump(barriers[i].getDistance());
+                    barriers[i].overcome(members[j].getMaxHeight());
                 }
 
             }
