@@ -34,6 +34,7 @@ public class Main {
                 matrix1[i][j] = "a";
             }
         }
+        matrix1[0][0] = "12";
 
 
         try
