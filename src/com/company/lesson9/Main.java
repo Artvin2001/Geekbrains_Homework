@@ -8,6 +8,7 @@ public class Main {
 
         int sum = 0;
         int element;
+
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
 
@@ -28,18 +29,19 @@ public class Main {
 
     public static void main(String[] args)
     {
-        String[][] matrix1 = new String[4][4];
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[0].length; j++) {
-                matrix1[i][j] = "a";
+        String[][] matrixExample = new String[4][4];
+        for (int i = 0; i < matrixExample.length; i++) {
+            for (int j = 0; j < matrixExample[0].length; j++) {
+                matrixExample[i][j] = "1";
             }
         }
-        matrix1[0][0] = "12";
 
+        int sum;
 
         try
         {
-            sumMatrix(matrix1);
+            sum = sumMatrix(matrixExample);
+            System.out.println("Сумма элементов матрицы: " + sum);
         }
         catch (MyArraySizeException error)
         {
@@ -49,6 +51,6 @@ public class Main {
         {
             System.out.println(errorData);
         }
-        return;
+
     }
 }
