@@ -24,7 +24,7 @@ public class HandBook {
         Iterator<String> iterSurname = this.surnames.iterator();
         Iterator<String> iterPhone = this.phones.iterator();
 
-        this.phones.get(1);
+        System.out.println("Список телефонов по заданной фамилии " + surname);
         while(iterSurname.hasNext())
         {
             String curSurname = iterSurname.next();
