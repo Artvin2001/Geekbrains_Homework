@@ -1,22 +1,38 @@
 package com.company.lesson10.task2;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class HandBook {
-    private HashMap<String, String> directory;
+    private ArrayList surnames;
+    private ArrayList phones;
 
-    public HandBook(HashMap<String, String> directory)
+    public HandBook(ArrayList surnames, ArrayList phones)
     {
-        this.directory = directory;
+        this.surnames = surnames;
+        this.phones = phones;
     }
 
     public void add(String surname, String phone)
     {
-        this.directory.put(surname, phone);
+        this.surnames.add(surname);
+        this.phones.add(phone);
     }
 
     public void get(String surname)
     {
-        System.out.println(this.directory.get(surname));
+        Iterator<String> iterSurname = this.surnames.iterator();
+        Iterator<String> iterPhone = this.phones.iterator();
+
+        this.phones.get(1);
+        while(iterSurname.hasNext())
+        {
+            String curSurname = iterSurname.next();
+            String curPhone = iterPhone.next();
+
+            if (curSurname == surname)
+                System.out.println(curPhone);
+        }
     }
+
 };
