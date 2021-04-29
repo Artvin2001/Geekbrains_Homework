@@ -3,11 +3,9 @@ package com.company.lesson11.task1;
 public class Main {
     public static void exchange(ArrayElement firstElement, ArrayElement secondElement)
     {
-        ArrayElement temp = new ArrayElement<>(0);
-        temp.set(firstElement.get());
+        ArrayElement temp = new ArrayElement<>(firstElement.get());
         firstElement.set(secondElement.get());
-        //System.out.println(temp.get());
-        secondElement.set(temp);
+        secondElement.set(temp.get());
     }
     public static void main(String[] args)
     {
@@ -18,6 +16,7 @@ public class Main {
         array[3] = new ArrayElement<>(7);
 
         exchange(array[0], array[1]);
+
         for (int i = 0; i < array.length; i++) {
             System.out.println(array[i].get());
         }
