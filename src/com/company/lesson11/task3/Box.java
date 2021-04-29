@@ -1,6 +1,7 @@
 package com.company.lesson11.task3;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Box<T>{
     private ArrayList<T> products;
@@ -35,10 +36,30 @@ public class Box<T>{
         return weight;
     }
 
+    public T getBoxClass()
+    {
+        return boxClass;
+    }
+
     public boolean compare(Box anotherBox)
     {
         if (this.getWeight() == anotherBox.getWeight())
             return true;
         else return false;
+    }
+
+    //пересыпать из одной коробки в другую
+    public void pourOver(Box anotherBox)
+    {
+        if (this.boxClass == anotherBox.getBoxClass())
+        {
+            Iterator<T> iterBox = this.products.iterator();
+
+            while (iterBox.hasNext())
+            {
+                anotherBox.addFruit(iterBox.next());
+            }
+
+        }
     }
 }

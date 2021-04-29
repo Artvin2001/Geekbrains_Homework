@@ -20,5 +20,10 @@ public class Main {
         System.out.println(boxExampleOrange.getWeight());
 
         System.out.println(boxExample.compare(boxExampleOrange));
+
+        ArrayList<Apple> appleList2 = new ArrayList<>();
+        Box boxExampleAppleTo = new Box(appleList2, Apple.class);
+        boxExample.pourOver(boxExampleAppleTo);
+        System.out.println(boxExampleAppleTo.getWeight());
     }
 };
